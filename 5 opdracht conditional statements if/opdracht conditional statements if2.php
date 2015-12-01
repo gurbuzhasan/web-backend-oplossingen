@@ -1,5 +1,5 @@
 <?php
-	$getal      =   2;
+	$getal      =   1;
     $dag        =   "";
 
     if($getal===1){
@@ -24,7 +24,9 @@
         $dag = "zondag";
     }
 
-
+    $dagUpper       =   strtoupper($dag);
+	$dagUpperExceptA=   str_replace("A", "a",$dagUpper);
+	$dagUpperExceptLastA= str_replace("DAG", "DaG",$dagUpper);
         
 ?>
 
@@ -34,7 +36,9 @@
     <meta charset="utf-8">
 </head>
 <body>
-    <p>DEEL 1: <?php  echo $dag ?></p><br>
+    <p>DEEL 2: <?php  echo $dagUpper ?></p><br>
+	<p>DEEL 2: <?php  echo $dagUpperExceptA ?></p><br>
+	<p>DEEL 2: <?php  echo $dagUpperExceptLastA ?></p><br>
 
 </body>
 </html>

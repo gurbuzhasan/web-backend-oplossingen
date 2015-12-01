@@ -12,6 +12,6 @@
 		<title>Opdracht comments</title>
 	</head>
 	<body>
-		<?php echo "Hasan Gürbüz" ?>
+		<?php echo "Hasan Gurbuz" ?>
 	</body>
 </html>

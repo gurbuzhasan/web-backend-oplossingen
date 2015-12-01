@@ -19,23 +19,28 @@
 <body>
 
     <table>
-        <tr>
-            <?php for ( $kolom = 0; $kolom <= $kolommen; $kolom++): ?>
-            <td>kolom</td>
+        
+            <?php for ( $i = 0; $i < $kolommen; $i++): ?>
+            <tr><td>rij</td></tr>
             <?php endfor ?>
-        </tr>
+        
     </table>
-    
-    
+    <hr></hr>
     <table>
-        <?php for($rij = 0; $rij < $rijen; $rij++):  ?>
-        <tr>	
-            <?php for( $kolom = 1; $kolom <= $kolommen; $kolom++ ):  ?>
-				<td class="<?= ( ( $rij * $kolom ) % 2 != 0 ) ? 'oneven' : '' ?>"><?= $rij * $kolom ?></td>
+        
+            <?php for ( $i = 0; $i < $rijen; $i++): ?>
+				
+			<tr>	
+				<?php for ( $j = 0; $j < $rijen; $j++): ?>
+				
+            	<td>kolom</td>
+				
+				<?php endfor ?>
+			</tr>	
             <?php endfor ?>
-        </tr>
-        <?php endfor ?>
+        
     </table>
+
     
     
 </body>

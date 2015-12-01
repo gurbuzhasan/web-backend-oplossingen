@@ -9,9 +9,6 @@
     $zoogdieren = array('aap', 'baviaan', 'chimpansee');
     $dierenLijst = array_merge($dieren, $zoogdieren);
 
-    $numbers = array('8', '7', '8', '7', '3', '2', '1', '2', '4');
-    $numbersDuplicates = array_unique($numbers);
-    $sortNumbersGK = rsort($numbers); 
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +18,8 @@
 </head>
 <body>
     
-    <p><?php print_r($aantaldieren) ?></p>
+    <pre><?php print_r($dieren) ?></pre>
+	<pre><?php print_r($dierenLijst) ?></pre>
 
 </body>
 </html>

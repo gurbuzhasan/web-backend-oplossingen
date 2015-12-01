@@ -1,7 +1,7 @@
 <?php
     $dieren = array('hond' , 'blobvis' ,'kangoeroe', 'sloth', 'leopard', 'mens', 'inktvis', 'koraal', 'finding nemo', 'cthulhu');
     $aantalDieren = count($dieren);
-	$teZoekenDier	=	"aapvis";
+	$teZoekenDier	=	"hnd";
     $dierGevonden	=	array_search( $teZoekenDier, $dieren );
 ?>
 
@@ -12,7 +12,9 @@
 </head>
 <body>
     
-    <p><?php print_r($aantaldieren) ?></p>
+    <p><?php print_r($aantalDieren) ?></p>
+	<p><?php if($dierGevonden !== FALSE){ echo "gevonden"; }
+	else{ echo " niet gevonden"; } ?></p>
 
 </body>
 </html>

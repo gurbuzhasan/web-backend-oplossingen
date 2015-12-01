@@ -1,31 +1,23 @@
 <?php
-	$getallen		=	array();
 
 	$getal = 0;
 
-	while ( $getal < 100 )
-	{
-		$getallen[]	=	$getal;
-		 $getal++;
-	}
-
-    $getallenPrint = implode( ', ', $getallen );
-
-	$getal = 0;
-
-	$getallen2	=	array();
-
-	while ( $getal < 100 )
-	{
-		if ( $getal % 3 == 0 && $getal > 40 && $getal < 80 )
-		{
-			$getallen2[]	=	$getal;
-		}
-
+	while ( $getal <= 100 ){
+ 		echo $getal.", ";
 		$getal++;
 	}
+	
+	echo '<br>'.'<br>';
+	
+	$getal2 = 0;
+    while($getal2 <= 100){
+        if(($getal2 >= 40) && ($getal2 <= 80) && (($getal2 % 3) == 0) ){
+          echo $getal2. " , ";
+         }
+           $getal2++;
 
-	$boodschappenlijstje = array('speaker', 'zaklamp', 'komkommer');
+    }
+
 
 ?>
 
@@ -36,13 +28,7 @@
 </head>
 <body>
     
-    <ul>
-        <?php $teller = 0; ?>
-        <?php while(isset($boodschappenlijstje[$teller])): ?>		
-        <li><?= $boodschappenlijstje[$teller] ?></li>
-        <?php $teller++ ?>
-        <?php endwhile ?>
-    </ul>
+    
 
 </body>
 </html>

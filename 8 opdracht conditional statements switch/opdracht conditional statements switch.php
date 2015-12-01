@@ -35,6 +35,6 @@
     <meta charset="utf-8">
 </head>
 <body>
-
+<p><?php echo $dag ?></p>
 </body>
 </html>
