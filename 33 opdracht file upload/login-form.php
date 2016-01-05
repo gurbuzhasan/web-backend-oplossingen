@@ -2,9 +2,9 @@
 	
 	session_start();
 	
-	echo "<pre>";
-	print_r($_SESSION);
-	echo "</pre>";
+//	echo "<pre>";
+//	print_r($_SESSION);
+//	echo "</pre>";
 	
 	
 ?>
@@ -16,7 +16,8 @@
 
 <h1>Inloggen</h1>
 
-a@b.c
+email: a@b.cde <br/>
+pass: hello
     <form action="login-process.php" method="post">
         <ul>
 			<p style="color:red"><?php echo (isset($_SESSION["notification"]["message"]) ?  $_SESSION["notification"]["message"]  : '');?></p>

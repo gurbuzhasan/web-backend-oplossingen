@@ -4,7 +4,7 @@
 	
 	try{
 	
-		$db = new PDO('mysql:host=localhost;dbname=opdracht-security-login', 'root', 'root');
+		$db = new PDO('mysql:host=localhost;dbname=opdracht-file-upload', 'root', 'root');
 		$message = "verbonden";
 		
 		if(isset($_POST["login"])){

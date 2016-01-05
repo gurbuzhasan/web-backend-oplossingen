@@ -6,12 +6,12 @@
 	
 	$cookieExplode = explode(",", $_COOKIE["login"]);
 	$showContent = false;
-	echo "<pre>";
-	print_r($cookieExplode);
-	echo "</pre>";
+//	echo "<pre>";
+//	print_r($cookieExplode);
+//	echo "</pre>";
 	
 	try{
-		$db = new PDO('mysql:host=localhost;dbname=opdracht-security-login', 'root', 'root');
+		$db = new PDO('mysql:host=localhost;dbname=opdracht-file-upload', 'root', 'root');
 		$message = "verbonden";
 		
 		
@@ -53,8 +53,14 @@
 <body>
 
 <h1>Dashboard</h1>
+
+	<a href="gegevens-wijzigen-form.php"> > gegevens wijzigen</a>
+	<br/>
+	
 	<?php if($showContent): ?>
 		<a href="logout.php">uitloggen</a>
     <?php endif ?>
+	
+	
 </body>
 </html>
