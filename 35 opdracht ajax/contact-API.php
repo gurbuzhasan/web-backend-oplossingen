@@ -5,6 +5,7 @@
 	
 	$contact = new Contact();
 
+
 	//check of deze pagina is opgeroepen door een ajax request
 	if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest'){
 		

@@ -1,6 +1,6 @@
 <?php
 	
-	session_start();
+	
 
 	
 ?>
@@ -12,7 +12,7 @@
 <body>
 
 	<h1>Contacteer ons</h1>
-	<p class="error">
+<!--	<p class="error">
 		<style>
 			p.error {color:red;}
 		</style>
@@ -24,18 +24,18 @@
 			p.succes {color:green;}
 		</style>
 	<?php echo(isset($_SESSION["succes"]) ? $_SESSION["succes"] : "" ); ?>
-	</p>
+	</p> -->
 	
 	<p class="append"></p>
     <form action="contact.php" method="post" id="contact-form">
         <ul>
             <li>
                 <label for="email">E-mailadres</label><br/>
-                <input type="text" id="email" name="email" value="<?php echo(isset($_SESSION["email"]) ? $_SESSION["email"] : "" ); ?>">
+                <input type="text" id="email" name="email" value="">
             </li>
             <li>
                 <label for="message">Boodschap</label><br/>
-                <textarea name="message" id="message" cols="30" rows="10"><?php echo(isset($_SESSION["message"]) ? $_SESSION["message"] : "" ); ?></textarea>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
             </li>
             <li>
                 <input type="checkbox" name="checkbox" id="checkbox">
@@ -50,14 +50,18 @@
 	<script>
 
 //		console.log("hello");
-		$(document).ready(
-			
+		$(document).ready(function(){
+			console.log("ready");
 			
 			//voer anonieme functie uit bij submit
 			$("#contact-form").submit(function(){
+			
+			
+				console.log("submit");
 				
 				//steek de data van de form in een variabele
 				var inputData = $("#contact-form").serialize();
+				
 				
 //				console.log(inputData);
 				$.ajax({
@@ -67,12 +71,15 @@
 					data:inputData,
 					dataType: "json", //manier om json string te decoderen
 					success:function(data){
-						
 						console.log(data);
+						console.log("success function werkt " + data);
 						
 						//manier om json string te decoderen
 //						parsedData = JSON.parse(data);
 						if(data["type"] == "success"){
+							
+							console.log(data);
+							
 							
 							$("#contact-form").fadeOut(function(){
 							
@@ -83,9 +90,14 @@
 							
 						}else{
 							
-							$(".append").append("oops");
-							
+							$(".append").append(" oops ");
+							console.log(data);
 						}
+						
+					},
+					error:function(){
+						
+						$(".append").append("vul iets in aub");
 						
 					}
 					
@@ -93,7 +105,7 @@
 				//return false om niet meteen de form te submitten
 				return false;
 			})
-		)
+		})
 		
 	</script>
 		

@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?key=$1
+RewriteRule ^artikels/([a-zA-Z0-9_-]+)$ index.php?key=artikels/$1
+RewriteRule ^artikels/toevoegen/([a-zA-Z0-9_-]+)$ index.php?key=artikels/toevoegen/$1
+
+RewriteRule ^artikels/zoeken/content?artikelzoeken=([a-zA-Z0-9_-]+)&submitArtikel=Submit+Query$  artikels/zoeken/content/$1
+
+
+RewriteRule ^artikels/zoeken/([a-zA-Z0-9_-]+)$ index.php?key=artikels/zoeken/$1
+RewriteRule ^artikels/zoeken/content/([a-zA-Z0-9_-]+)$ index.php?key=artikels/zoeken/content&artikelzoeken=$1&submitArtikel=set
+RewriteRule ^artikels/zoeken/datum/([a-zA-Z0-9_-]+)$ index.php?key=artikels/zoeken/datum&datumzoeken=$1&submitDate=set
+
