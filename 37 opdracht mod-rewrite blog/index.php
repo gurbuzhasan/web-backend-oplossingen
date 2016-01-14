@@ -18,13 +18,13 @@
 				
 				break;
 			case "artikels/zoeken":
-				include('artikel-zoeken-redirect.php');  
+				include('artikel-zoeken.php');  
 				break;
 			case "artikels/zoeken/content":
-				include('artikel-zoeken-redirect.php');  
+				include('artikel-zoeken.php');  
 				break;
 			case "artikels/zoeken/datum":
-				include('artikel-zoeken-redirect.php');  
+				include('artikel-zoeken.php');  
 				break;
 		}
 

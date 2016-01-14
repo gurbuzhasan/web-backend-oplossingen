@@ -46,15 +46,15 @@
 	</pre> -->
 	<div style="border:solid ; padding:10px">
 	
-		<form action="<?= $basePath ?>/artikels/zoeken/content" method="get">
+		<form action="<?= $basePath ?>/artikel-zoeken-redirect.php" method="get">
 	        <label for="query-content">Zoeken in artikels:</label>
 	        <input type="text" name="artikelzoeken" id="query-content">
-	        <input type="submit" name="submit">
+	        <input type="submit" name="submitArtikel">
 	    </form>
 	    
-	    <form action="<?= $basePath ?>/artikels/zoeken/datum" method="get">
+	    <form action="<?= $basePath ?>/artikel-zoeken-redirect.php" method="get">
 	        <label for="query-date">Zoeken op datum:</label>
-	        <select name="datum-zoeken" id="query-date">
+	        <select name="datumzoeken" id="query-date">
 	            
 	            <option value="2010">2010</option>
 	            <option value="2011">2011</option>
@@ -67,7 +67,7 @@
 	            <option value="2018">2018</option>
 	            
 	        </select>
-	        <input type="submit" value="Zoeken">
+	        <input type="submit" name="submitDate" value="Zoeken">
 	    </form>
 
 	</div>

@@ -15,7 +15,7 @@
 	<p><?php echo(isset($_SESSION['notification']) ? $_SESSION['notification'] : ""); ?></p>
 	<?php $_SESSION['notification'] = ""; ?>
 	
-    <a href="/37 opdracht mod-rewrite blog/artikel-overzicht.php">Terug naar overzicht</a>
+    <a href="<?= $basePath ?>/artikels">Terug naar overzicht</a>
 
     <form action="<?= $basePath ?>/artikels/toevoegen/confirm" method="post">
         <ul>
